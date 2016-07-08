@@ -36,7 +36,7 @@ switch ($argv[1]) {
     // 随机校验暴力破解成功率
     case 'check':
         $i = 0;
-        while ($i < 10000) {
+        while ($i < $argv[2]) {
             $code = gen_rand_code();
             if (Code::check($code)) {
                 echo "valid $code\n";
